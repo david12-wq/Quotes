@@ -14,12 +14,13 @@
             <button class="btn btn-primary" (click)='deleteQuote($event,i)'>DELETE</button>
           </div>
         </div>
-  
+
        
       </div>
   
       <div class="col-md-6">
-        <app-form (addQuote)="addNewQuote($event)"></app-form>
+        <!-- <app-form (addQuote)="addNewQuote($event)"></app-form> -->
+        <app-form-quote (addQuote)="addNewQuote($event)"></app-form-quote><br>
         <button class="btn btn-primary" (click)='fabQuote()'>BEST QUOTE</button>
         <div class="card-body">
           <h5 class="card-title">{{author}}</h5>

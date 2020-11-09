@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { FormComponent } from './form/form.component';
 import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
+import { FormQuoteComponent } from './form-quote/form-quote.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DateCountPipe } from './date-count.pipe';
     HomeComponent,
     FormComponent,
     StrikethroughDirective,
-    DateCountPipe
+    DateCountPipe,
+    FormQuoteComponent
   ],
   imports: [
     BrowserModule,
