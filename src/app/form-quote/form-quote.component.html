@@ -6,7 +6,7 @@
       <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
         <div class="form-group">
 
-          <label for="author">UAUTHOR</label>
+          <label for="author">AUTHOR</label>
           <input type="text" class="form-control" id="author" [(ngModel)]="newQuote. author" name="author"
             #author='ngModel' required>
           <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
