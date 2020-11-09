@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row">
+  
+      <div class="col-md-6">
+        <div *ngFor='let quote of  quotes; let i = index'>
+  
+          <div class="card-body">
+            <h5 class="card-title">{{quote.author}}</h5>
+            <p class="card-text">{{quote.message}}</p>
+            <p class="card-text">{{quote.user}}</p>
+            <p class="card-text">{{quote.day|dateCount}} DAYS AGO</p>
+            <button class="btn btn-primary" (click)='upVote(i)'>LIKE {{quote.upVote}}</button>
+            <button style="color: red;" class="btn btn-primary"  (click)='downVote(i)'>DISLIKE {{quote.downVote}}</button>
+            <button class="btn btn-primary" (click)='deleteQuote($event,i)'>DELETE</button>
+          </div>
+        </div>
+  
+       
+      </div>
+  
+      <div class="col-md-6">
+        <app-form (addQuote)="addNewQuote($event)"></app-form>
+        <button class="btn btn-primary" (click)='fabQuote()'>BEST QUOTE</button>
+        <div class="card-body">
+          <h5 class="card-title">{{author}}</h5>
+          <p class="card-text">{{message}}</p>
+          <h5 class="card-title">{{user}}</h5>
+          <p class="card-text">{{post|dateCount}} DAYS AGO</p>
+          <button class="btn btn-primary">LIKE {{liked}}</button>
+          <button class="btn btn-primary">DISLIKE {{unliked}}</button>
+  
+        </div>
+  
+      </div>
+    </div>
+  
